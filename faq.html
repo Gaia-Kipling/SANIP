@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently Asked Questions - Get answers to common questions about SANIP and EQASA certification.">
+  <title>FAQ | SANIP</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .faq-item {
+      margin-bottom: var(--space-lg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: var(--space-lg);
+      background-color: var(--color-background-light);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      transition: background-color var(--transition-fast);
+    }
+    .faq-question:hover {
+      background-color: var(--color-border);
+    }
+    .faq-question h4 {
+      margin: 0;
+      flex: 1;
+    }
+    .faq-toggle {
+      background: none;
+      border: none;
+      font-size: var(--font-size-lg);
+      cursor: pointer;
+      transition: transform var(--transition-fast);
+      width: 30px;
+      height: 30px;
+    }
+    .faq-toggle.open {
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      display: none;
+      padding: var(--space-lg);
+      background-color: var(--color-white);
+      border-top: 1px solid var(--color-border);
+    }
+    .faq-answer.open {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-to-content">Skip to main content</a>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo"><div class="logo-text"><strong>SANIP</strong><small>EQASA</small></div></a>
+        <div class="header-nav">
+          <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+          <nav>
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="about-us.html" class="nav-link">About Us</a></li>
+              <li><a href="syllabus.html" class="nav-link">Syllabus</a></li>
+              <li><a href="exam-dates.html" class="nav-link">Exam Dates</a></li>
+              <li><a href="downloads.html" class="nav-link">Downloads</a></li>
+              <li><a href="news.html" class="nav-link">News</a></li>
+              <li><a href="shop.html" class="nav-link">Shop</a></li>
+              <li><a href="faq.html" class="nav-link active">FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <a href="cart.html" class="cart-icon" title="Shopping Cart">🛒<span class="cart-badge">0</span></a>
+      </div>
+    </div>
+  </header>
+  
+  <main id="main">
+    <div class="container">
+      <div class="content-wrapper">
+        <div class="main-content">
+          <h1 class="page-title left-align">Frequently Asked Questions</h1>
+          <p class="lead">Find answers to common questions about SANIP, EQASA certification, and our programmes.</p>
+          
+          <section>
+            <h2>Registration & Enrollment</h2>
+            
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <h4>How do I register for SANIP?</h4>
+                <button class="faq-toggle">▼</button>
+              </div>
+              <div class="faq-answer">
+                <p>You can register online through our Shop page. Simply select the module(s) you wish to pursue, add them to your cart, and proceed to checkout. You can pay online using our secure payment system.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <h4>Do I need to complete all modules in order?</h4>
+                <button class="faq-toggle">▼</button>
+              </div>
+              <div class="faq-answer">
+                <p>While modules are designed to build progressively, you may start with any module. However, we recommend beginning with Module 1 if you're new to equestrian instruction. Some modules do require prerequisites.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <h4>What if I already have experience? Can I skip modules?</h4>
+                <button class="faq-toggle">▼</button>
+              </div>
+              <div class="faq-answer">
+                <p>Yes! SANIP offers Recognition of Prior Learning (RPL). You can apply to test out of modules where you have equivalent knowledge and experience. See our RPL page for details.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <h4>How long is each module?</h4>
+                <button class="faq-toggle">▼</button>
+              </div>
+              <div class="faq-answer">
+                <p>Module duration varies. Theory-based modules typically take 3-6 months of self-paced study, while practical modules may take longer depending on your training pace. You have up to 2 years to complete any module.</p>
+              </div>
+            </div>
+          </section>
+          
+          <section>
+            <h2>Exams & Assessment</h2>
+            
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <h4>When are exams held?</h4>
+                <button class="faq-toggle">▼</button>
+              </div>
+              <div class="faq-answer">
+                <p>EQASA exams are held at multiple locations throughout South Africa, typically 2-4 times per year. Check our Exam Dates page for provincial exam schedules and registration deadlines.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <h4>What is the practical assessment like?</h4>
+                <button class="faq-toggle">▼</button>
+              </div>
+              <div class="faq-answer">
+                <p>Practical assessments include riding demonstrations and teaching observations. Assessors evaluate your horsemanship, teaching ability, communication, and horse welfare practices according to EQASA standards.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <h4>What if I don't pass an exam?</h4>
+                <button class="faq-toggle">▼</button>
+              </div>
+              <div class="faq-answer">
+                <p>Don't worry - you can retake the exam at the next available sitting. We provide detailed feedback to help you prepare better. Most candidates pass on their second attempt with additional study and practice.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <h4>Is the certificate valid internationally?</h4>
+                <button class="faq-toggle">▼</button>
+              </div>
+              <div class="faq-answer">
+                <p>EQASA certification is recognized throughout South Africa and has strong standing in the Southern African region. International recognition depends on your destination country's requirements. Contact us for specifics about your situation.</p>
+              </div>
+            </div>
+          </section>
+          
+          <section>
+            <h2>Fees & Payment</h2>
+            
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <h4>How much does SANIP cost?</h4>
+                <button class="faq-toggle">▼</button>
+              </div>
+              <div class="faq-answer">
+                <p>Fees are charged per module. Visit our Fees page to see current pricing for each module. Discounts are available for multiple module registrations and group registrations.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <h4>What payment methods do you accept?</h4>
+                <button class="faq-toggle">▼</button>
+              </div>
+              <div class="faq-answer">
+                <p>We accept credit cards, debit cards, and EFT transfers. Our online payment system is secure and encrypted. You'll receive an immediate confirmation email after payment.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <h4>Is there a payment plan available?</h4>
+                <button class="faq-toggle">▼</button>
+              </div>
+              <div class="faq-answer">
+                <p>Yes. For modules over R2000, we offer a 2-installment payment option. Contact us for details about payment arrangements.</p>
+              </div>
+            </div>
+          </section>
+          
+          <section>
+            <h2>Certificates & Qualifications</h2>
+            
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <h4>What certificate do I receive after completing a module?</h4>
+                <button class="faq-toggle">▼</button>
+              </div>
+              <div class="faq-answer">
+                <p>You receive an EQASA certificate for each module successfully completed, including your certificate level (1-4). The certificate shows your achievements and is recognized throughout South Africa.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <h4>How long does a certificate remain valid?</h4>
+                <button class="faq-toggle">▼</button>
+              </div>
+              <div class="faq-answer">
+                <p>EQASA certificates don't expire. However, we encourage instructors to pursue continuous professional development and additional modules to stay current with industry standards.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <h4>Can I upgrade my certificate?</h4>
+                <button class="faq-toggle">▼</button>
+              </div>
+              <div class="faq-answer">
+                <p>Yes. After completing modules at one level, you can pursue modules at the next level to upgrade your qualification. This provides structured progression from Basic through Master Instructor levels.</p>
+              </div>
+            </div>
+          </section>
+          
+          <section>
+            <h2>Still have questions?</h2>
+            <p>Can't find the answer you're looking for? Our team is here to help!</p>
+            <a href="contact.html" class="btn">Contact Us</a>
+          </section>
+        </div>
+        
+        <aside class="sidebar">
+          <div class="sidebar-section">
+            <h3>Information</h3>
+            <ul>
+              <li><a href="need-to-know.html">Need to Know</a></li>
+              <li><a href="exam-dates.html">Exam Dates</a></li>
+              <li><a href="fees.html">Fees</a></li>
+              <li><a href="syllabus.html">Syllabus</a></li>
+              <li><a href="rpl.html">RPL Process</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="shop.html">Register Now</a></li>
+              <li><a href="register.html">Create Account</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="cart.html">Shopping Cart</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>EQASA Registration</h4>
+          <ul>
+            <li><a href="shop.html">Register Now</a></li>
+            <li><a href="register.html">Create Account</a></li>
+            <li><a href="fees.html">View Fees</a></li>
+            <li><a href="syllabus.html">View Syllabus</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="syllabus.html">Syllabus</a></li>
+            <li><a href="alumni.html">Alumni List</a></li>
+            <li><a href="rpl.html">RPL Process</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="need-to-know.html">Need to Know</a></li>
+            <li><a href="exam-dates.html">Exam Dates</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="about-us.html">About SANIP</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="my-account.html">My Account</a></li>
+            <li><a href="cart.html">Shopping Cart</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>&copy; 2024 SANIP. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+        <div class="footer-links">
+          <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    function toggleFAQ(element) {
+      const toggle = element.querySelector('.faq-toggle');
+      const answer = element.nextElementSibling;
+      toggle.classList.toggle('open');
+      answer.classList.toggle('open');
+    }
+  </script>
+  <script src="js/main.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

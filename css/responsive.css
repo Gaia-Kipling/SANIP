@@ -1,0 +1,568 @@
+/* ==========================================================================
+   SANIP/EQASA Website - Responsive Design (Mobile-First)
+   ========================================================================== */
+
+/* Base mobile styles are set in global.css, layout.css, etc.
+   These media queries enhance and adjust for larger screens */
+
+/* ==========================================================================
+   SMALL MOBILE - 375px and up
+   ========================================================================== */
+
+@media (min-width: 375px) {
+  .container {
+    padding: 0 var(--space-lg);
+  }
+}
+
+/* ==========================================================================
+   MOBILE LANDSCAPE - 480px and up
+   ========================================================================== */
+
+@media (min-width: 480px) {
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .page-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .section-heading {
+    font-size: var(--font-size-2xl);
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   TABLET - 768px and up
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  /* Typography scaling */
+  body {
+    font-size: var(--font-size-base);
+  }
+
+  h1 {
+    font-size: var(--font-size-4xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-3xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-2xl);
+  }
+
+  /* Header changes */
+  .menu-toggle {
+    display: none;
+  }
+
+  /* Navigation becomes visible */
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-list {
+    flex-direction: row;
+  }
+
+  /* Main content layout changes */
+  .content-wrapper {
+    grid-template-columns: 1fr 300px;
+    gap: var(--space-xl);
+  }
+
+  .main-content {
+    grid-column: 1;
+  }
+
+  .sidebar {
+    grid-column: 2;
+    position: sticky;
+    top: 100px;
+  }
+
+  /* Footer columns */
+  .footer-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Grid system columns */
+  .col-2 {
+    flex: 0 0 50%;
+  }
+
+  .col-3 {
+    flex: 0 0 33.333%;
+  }
+
+  .col-4 {
+    flex: 0 0 25%;
+  }
+
+  /* Form improvements */
+  .form-row {
+    display: flex;
+    gap: var(--space-md);
+  }
+
+  .form-row .form-group {
+    flex: 1;
+  }
+
+  /* Table responsive */
+  .table-responsive {
+    overflow-x: visible;
+  }
+
+  .table {
+    font-size: var(--font-size-base);
+  }
+
+  /* Cards in grid */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  /* Spacing adjustments */
+  main {
+    padding: var(--space-2xl) 0;
+  }
+
+  section {
+    margin-bottom: var(--space-3xl);
+  }
+}
+
+/* ==========================================================================
+   TABLET LANDSCAPE - 1024px and up
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--container-lg);
+  }
+
+  /* Three column layout support */
+  .col-3 {
+    flex: 0 0 33.333%;
+  }
+
+  /* Card grids */
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Improved navigation */
+  .nav-list {
+    gap: var(--space-md);
+  }
+
+  .dropdown-menu {
+    min-width: 220px;
+  }
+
+  /* Header adjustments */
+  .header-content {
+    gap: var(--space-xl);
+  }
+
+  /* Sidebar positioning */
+  .sidebar {
+    top: 120px;
+  }
+
+  /* Larger main content padding */
+  .main-content {
+    padding: var(--space-2xl);
+  }
+
+  /* Spacing improvements */
+  main {
+    padding: var(--space-3xl) 0;
+  }
+
+  /* Featured sections */
+  .featured-section {
+    padding: var(--space-4xl) var(--space-2xl);
+  }
+}
+
+/* ==========================================================================
+   DESKTOP - 1280px and up
+   ========================================================================== */
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+
+  h1 {
+    font-size: var(--font-size-4xl);
+  }
+
+  /* Wider layouts */
+  .content-wrapper {
+    gap: var(--space-2xl);
+  }
+
+  /* Four column grid */
+  .col-4 {
+    flex: 0 0 25%;
+  }
+
+  .card-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+  }
+
+  /* Improve readable content width */
+  .readable {
+    max-width: 80ch;
+  }
+
+  /* Hero section enhancements */
+  .hero-section {
+    padding: var(--space-4xl) var(--space-2xl);
+  }
+
+  /* Footer improvements */
+  .footer-content {
+    gap: var(--space-2xl);
+  }
+
+  /* Increased hover effects on larger screens */
+  .card {
+    cursor: pointer;
+  }
+}
+
+/* ==========================================================================
+   LARGE DESKTOP - 1440px and up
+   ========================================================================== */
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: var(--container-2xl);
+  }
+
+  /* More generous spacing */
+  main {
+    padding: var(--space-4xl) 0;
+  }
+
+  section {
+    margin-bottom: var(--space-4xl);
+  }
+
+  /* Larger typography */
+  body {
+    font-size: var(--font-size-base);
+  }
+
+  .page-title {
+    font-size: 3rem;
+  }
+
+  /* Content improvements */
+  .main-content {
+    padding: var(--space-3xl);
+  }
+
+  .readable {
+    max-width: 90ch;
+  }
+}
+
+/* ==========================================================================
+   EXTRA LARGE DESKTOP - 1920px and up
+   ========================================================================== */
+
+@media (min-width: 1920px) {
+  .container {
+    padding: 0 var(--space-2xl);
+  }
+
+  /* Maximum content width */
+  .max-width {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Generous spacing */
+  h1 {
+    margin-bottom: var(--space-2xl);
+  }
+
+  h2 {
+    margin-bottom: var(--space-2xl);
+  }
+
+  /* Advanced layouts */
+  .hero-section {
+    padding: var(--space-4xl);
+  }
+
+  /* Multiple columns for content */
+  .text-columns {
+    columns: 2;
+    column-gap: var(--space-2xl);
+  }
+}
+
+/* ==========================================================================
+   SMALL SCREENS ADJUSTMENTS (320px - 767px)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  /* Full width navigation when mobile menu open */
+  nav.mobile-open {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 99;
+    flex-direction: column;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* Show mobile menu toggle */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Stack content wrapper */
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    grid-column: 1;
+  }
+
+  .sidebar {
+    grid-column: 1;
+    position: static;
+  }
+
+  /* Single column cards */
+  .card-grid,
+  .card-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer single column on small screens */
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  /* Reduce button sizes on mobile */
+  .btn {
+    width: 100%;
+  }
+
+  /* Form improvements */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea,
+  select {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Table responsive */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table {
+    font-size: var(--font-size-xs);
+  }
+
+  .table th,
+  .table td {
+    padding: var(--space-sm);
+  }
+
+  /* Modals on small screens */
+  .modal-content {
+    width: 95%;
+  }
+
+  /* Reduced header padding */
+  .header-content {
+    padding: var(--space-sm) 0;
+  }
+
+  .logo {
+    font-size: var(--font-size-base);
+  }
+
+  /* Dropdown menus */
+  .dropdown-menu {
+    position: fixed;
+    left: var(--space-lg);
+    right: var(--space-lg);
+    width: auto;
+  }
+
+  /* Hide some elements on very small screens */
+  .hide-mobile {
+    display: none !important;
+  }
+
+  /* Typography adjustments */
+  .page-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Spacing reductions */
+  main {
+    min-height: auto;
+    padding: var(--space-lg) 0;
+  }
+
+  section {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .featured-section {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  /* Larger click targets for touch */
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Flexbox adjustments */
+  .flex-between {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+}
+
+/* ==========================================================================
+   PRINT MEDIA QUERIES
+   ========================================================================== */
+
+@media print {
+  header,
+  .sidebar,
+  .menu-toggle,
+  footer,
+  .no-print {
+    display: none;
+  }
+
+  body {
+    background-color: var(--color-white);
+  }
+
+  .main-content {
+    box-shadow: none;
+    border: none;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  p, li, dt, dd {
+    page-break-inside: avoid;
+  }
+}
+
+/* ==========================================================================
+   HIGH CONTRAST MODE SUPPORT
+   ========================================================================== */
+
+@media (prefers-contrast: more) {
+  :root {
+    --color-border: #999999;
+    --color-text: #000000;
+  }
+
+  .card,
+  .sidebar-section {
+    border-width: 2px;
+  }
+}
+
+/* ==========================================================================
+   REDUCED MOTION SUPPORT
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   DARK MODE SUPPORT (Optional)
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  /* Can add dark mode styles here if desired */
+  /* body {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+  } */
+}

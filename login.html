@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login to your SANIP account to access your courses and certifications.">
+  <title>Login | SANIP</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .auth-container {
+      max-width: 500px;
+      margin: var(--space-3xl) auto;
+      padding: var(--space-2xl);
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+    .auth-container h1 {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+      font-size: var(--font-size-2xl);
+    }
+    .auth-divider {
+      text-align: center;
+      margin: var(--space-xl) 0;
+      color: var(--color-text-light);
+    }
+    .auth-links {
+      text-align: center;
+      margin-top: var(--space-lg);
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--color-border);
+    }
+    .auth-links a {
+      display: block;
+      margin: var(--space-sm) 0;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-to-content">Skip to main content</a>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo"><div class="logo-text"><strong>SANIP</strong><small>EQASA</small></div></a>
+        <div class="header-nav">
+          <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+          <nav>
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="about-us.html" class="nav-link">About Us</a></li>
+              <li><a href="syllabus.html" class="nav-link">Syllabus</a></li>
+              <li><a href="exam-dates.html" class="nav-link">Exam Dates</a></li>
+              <li><a href="downloads.html" class="nav-link">Downloads</a></li>
+              <li><a href="news.html" class="nav-link">News</a></li>
+              <li><a href="shop.html" class="nav-link">Shop</a></li>
+              <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <a href="cart.html" class="cart-icon" title="Shopping Cart">🛒<span class="cart-badge">0</span></a>
+      </div>
+    </div>
+  </header>
+  
+  <main id="main">
+    <div class="container">
+      <div class="auth-container">
+        <h1>Login to Your Account</h1>
+        <p class="text-center text-muted">Access your SANIP courses, certifications, and account information.</p>
+        
+        <!-- NOTE: This is a UI-only mockup. No backend processing. -->
+        <div class="alert alert-warning">
+          <p><strong>Frontend Demo:</strong> This login form is a user interface mockup. Without a backend server, user data cannot be stored or authenticated. In a production system, this would securely handle user credentials and database operations.</p>
+        </div>
+        
+        <form class="auth-form" data-no-submit="true">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+            <small class="form-text">We'll never share your email with anyone else.</small>
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+            <small class="form-text"><a href="password-reset.html">Forgot your password?</a></small>
+          </div>
+          
+          <div class="form-group">
+            <label>
+              <input type="checkbox" name="remember"> Remember me
+            </label>
+          </div>
+          
+          <button type="submit" class="btn btn-block">Sign In</button>
+        </form>
+        
+        <div class="auth-divider">
+          <p>Don't have an account?</p>
+        </div>
+        
+        <button type="button" class="btn btn-outline btn-block" onclick="window.location.href='register.html'">Create New Account</button>
+        
+        <div class="auth-links">
+          <p style="margin: 0 0 var(--space-sm) 0;"><strong>Quick Links:</strong></p>
+          <a href="register.html">Create an Account</a>
+          <a href="password-reset.html">Reset Password</a>
+          <a href="shop.html">Register for a Module</a>
+          <a href="contact.html">Need Help?</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>EQASA Registration</h4>
+          <ul>
+            <li><a href="shop.html">Register Now</a></li>
+            <li><a href="register.html">Create Account</a></li>
+            <li><a href="fees.html">View Fees</a></li>
+            <li><a href="syllabus.html">View Syllabus</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="syllabus.html">Syllabus</a></li>
+            <li><a href="alumni.html">Alumni List</a></li>
+            <li><a href="rpl.html">RPL Process</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="need-to-know.html">Need to Know</a></li>
+            <li><a href="exam-dates.html">Exam Dates</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="about-us.html">About SANIP</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="my-account.html">My Account</a></li>
+            <li><a href="cart.html">Shopping Cart</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>&copy; 2024 SANIP. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+        <div class="footer-links">
+          <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="js/main.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

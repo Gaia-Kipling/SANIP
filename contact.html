@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact SANIP - Get in touch with us for questions about our programmes and services.">
+  <title>Contact Us | SANIP</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--space-2xl);
+      margin-bottom: var(--space-3xl);
+    }
+    .contact-info {
+      background: var(--color-background-light);
+      padding: var(--space-lg);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-lg);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-to-content">Skip to main content</a>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo"><div class="logo-text"><strong>SANIP</strong><small>EQASA</small></div></a>
+        <div class="header-nav">
+          <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+          <nav>
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="about-us.html" class="nav-link">About Us</a></li>
+              <li><a href="syllabus.html" class="nav-link">Syllabus</a></li>
+              <li><a href="exam-dates.html" class="nav-link">Exam Dates</a></li>
+              <li><a href="downloads.html" class="nav-link">Downloads</a></li>
+              <li><a href="news.html" class="nav-link">News</a></li>
+              <li><a href="shop.html" class="nav-link">Shop</a></li>
+              <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <a href="cart.html" class="cart-icon" title="Shopping Cart">🛒<span class="cart-badge">0</span></a>
+      </div>
+    </div>
+  </header>
+  
+  <main id="main">
+    <div class="container">
+      <h1 class="page-title">Contact Us</h1>
+      <p class="lead" style="text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">Have questions? We'd love to hear from you! Get in touch with SANIP.</p>
+      
+      <div class="contact-grid" style="max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <!-- Contact Form -->
+        <div class="main-content">
+          <h2>Send us a Message</h2>
+          <form data-no-submit="true">
+            <div class="form-group">
+              <label for="name">Full Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject <span class="required">*</span></label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a topic</option>
+                <option value="general">General Inquiry</option>
+                <option value="registration">Registration Help</option>
+                <option value="exam">Exam Information</option>
+                <option value="support">Technical Support</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message <span class="required">*</span></label>
+              <textarea id="message" name="message" required placeholder="Tell us how we can help..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+        
+        <!-- Contact Info -->
+        <div>
+          <h2>Contact Information</h2>
+          
+          <div class="contact-info">
+            <h4>📞 Phone</h4>
+            <p>+27 (0) 11 123 4567<br>(Monday - Friday, 9am - 5pm SAST)</p>
+          </div>
+          
+          <div class="contact-info">
+            <h4>✉️ Email</h4>
+            <p><a href="mailto:info@sanip.org.za">info@sanip.org.za</a><br><a href="mailto:support@sanip.org.za">support@sanip.org.za</a></p>
+          </div>
+          
+          <div class="contact-info">
+            <h4>📍 Address</h4>
+            <p>SANIP Office<br>Equestrian Centre<br>Johannesburg, South Africa</p>
+          </div>
+          
+          <div class="contact-info">
+            <h4>🕐 Business Hours</h4>
+            <p>Monday - Friday: 9am - 5pm<br>Saturday: 10am - 2pm<br>Sunday: Closed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>EQASA Registration</h4>
+          <ul>
+            <li><a href="shop.html">Register Now</a></li>
+            <li><a href="register.html">Create Account</a></li>
+            <li><a href="fees.html">View Fees</a></li>
+            <li><a href="syllabus.html">View Syllabus</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="syllabus.html">Syllabus</a></li>
+            <li><a href="alumni.html">Alumni List</a></li>
+            <li><a href="rpl.html">RPL Process</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="need-to-know.html">Need to Know</a></li>
+            <li><a href="exam-dates.html">Exam Dates</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="about-us.html">About SANIP</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="my-account.html">My Account</a></li>
+            <li><a href="cart.html">Shopping Cart</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>&copy; 2024 SANIP. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+        <div class="footer-links">
+          <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="js/main.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SANIP - South African National Instructor Programme. Professional equestrian education and EQASA certification.">
+  <meta name="keywords" content="SANIP, EQASA, equestrian, instructor, training, certification">
+  <meta name="author" content="SANIP">
+  <title>SANIP - South African National Instructor Programme</title>
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <style>
+    /* Homepage-specific styles */
+    .hero-section {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      color: var(--color-white);
+      padding: var(--space-4xl) var(--space-xl);
+      text-align: center;
+      margin-bottom: var(--space-3xl);
+      border-radius: var(--radius-lg);
+    }
+    
+    .hero-section h1 {
+      color: var(--color-white);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .hero-section p {
+      font-size: var(--font-size-lg);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .hero-cta {
+      display: flex;
+      gap: var(--space-md);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .hero-cta .btn {
+      min-width: 200px;
+    }
+    
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-lg);
+      margin-bottom: var(--space-3xl);
+    }
+    
+    .feature-card {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-base);
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .feature-card-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, var(--color-background-light) 0%, var(--color-border) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+    
+    .feature-card-content {
+      padding: var(--space-lg);
+    }
+    
+    .feature-card h3 {
+      margin-top: 0;
+      color: var(--color-primary);
+    }
+    
+    .feature-card p {
+      margin-bottom: var(--space-md);
+      font-size: var(--font-size-sm);
+      color: var(--color-text-light);
+    }
+    
+    .stats-section {
+      background: var(--color-background-light);
+      padding: var(--space-2xl) var(--space-xl);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-3xl);
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: var(--space-lg);
+      text-align: center;
+    }
+    
+    .stat-item h3 {
+      font-size: var(--font-size-3xl);
+      color: var(--color-primary);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .stat-item p {
+      margin: 0;
+      font-size: var(--font-size-sm);
+      color: var(--color-text-light);
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to content link -->
+  <a href="#main" class="skip-to-content">Skip to main content</a>
+  
+  <!-- Header (reusable template) -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <div class="logo-text">
+            <strong>SANIP</strong>
+            <small>EQASA</small>
+          </div>
+        </a>
+        
+        <div class="header-nav">
+          <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          
+          <nav>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="about-us.html" class="nav-link">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <button class="nav-link dropdown-toggle">Syllabus</button>
+                <ul class="dropdown-menu">
+                  <li><a href="syllabus.html" class="dropdown-item">Syllabus Overview</a></li>
+                  <li><a href="syllabus-module-1.html" class="dropdown-item">Module 1</a></li>
+                  <li><a href="syllabus-module-2.html" class="dropdown-item">Module 2</a></li>
+                  <li><a href="syllabus-module-3.html" class="dropdown-item">Module 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="exam-dates.html" class="nav-link">Exam Dates</a>
+              </li>
+              <li class="nav-item">
+                <a href="downloads.html" class="nav-link">Downloads</a>
+              </li>
+              <li class="nav-item">
+                <a href="news.html" class="nav-link">News</a>
+              </li>
+              <li class="nav-item">
+                <a href="shop.html" class="nav-link">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a href="faq.html" class="nav-link">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        
+        <a href="cart.html" class="cart-icon" title="Shopping Cart">
+          <span>🛒</span>
+          <span class="cart-badge">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main id="main">
+    <div class="container">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <h1>Welcome to SANIP</h1>
+        <p>South African National Instructor Programme - Professional Equestrian Education & EQASA Certification</p>
+        <div class="hero-cta">
+          <a href="shop.html" class="btn">Register Now</a>
+          <a href="about-us.html" class="btn btn-outline">Learn More</a>
+          <a href="syllabus.html" class="btn btn-secondary">View Syllabus</a>
+        </div>
+      </section>
+      
+      <!-- Features Grid -->
+      <section>
+        <h2 class="section-heading">Why Choose SANIP?</h2>
+        <div class="featured-grid">
+          <div class="feature-card">
+            <div class="feature-card-image">📚</div>
+            <div class="feature-card-content">
+              <h3>Comprehensive Syllabus</h3>
+              <p>Seven comprehensive modules covering all aspects of equestrian instruction and horsemanship.</p>
+              <a href="syllabus.html" class="link-external">View Syllabus →</a>
+            </div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card-image">🏆</div>
+            <div class="feature-card-content">
+              <h3>Professional Certification</h3>
+              <p>Earn recognized EQASA qualifications that advance your equestrian career.</p>
+              <a href="about-us.html" class="link-external">Learn About Certification →</a>
+            </div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card-image">👥</div>
+            <div class="feature-card-content">
+              <h3>Expert Instructors</h3>
+              <p>Learn from experienced and qualified equestrian professionals.</p>
+              <a href="alumni.html" class="link-external">Meet Our Instructors →</a>
+            </div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card-image">📅</div>
+            <div class="feature-card-content">
+              <h3>Flexible Scheduling</h3>
+              <p>Multiple exam dates throughout the year to fit your schedule.</p>
+              <a href="exam-dates.html" class="link-external">View Exam Dates →</a>
+            </div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card-image">💰</div>
+            <div class="feature-card-content">
+              <h3>Affordable Pricing</h3>
+              <p>Competitive module-based pricing for professional development.</p>
+              <a href="fees.html" class="link-external">View Fees →</a>
+            </div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card-image">❓</div>
+            <div class="feature-card-content">
+              <h3>24/7 Support</h3>
+              <p>Get help with your questions through our comprehensive FAQ and support system.</p>
+              <a href="faq.html" class="link-external">View FAQ →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Statistics Section -->
+      <section class="stats-section">
+        <h2 class="section-heading" style="text-align: center; margin-top: 0;">Our Impact</h2>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3>500+</h3>
+            <p>Certified Instructors</p>
+          </div>
+          <div class="stat-item">
+            <h3>25+</h3>
+            <p>Years Experience</p>
+          </div>
+          <div class="stat-item">
+            <h3>7</h3>
+            <p>Training Modules</p>
+          </div>
+          <div class="stat-item">
+            <h3>4</h3>
+            <p>Certificate Levels</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Latest News Section -->
+      <section>
+        <h2 class="section-heading">Latest News</h2>
+        <div class="featured-grid">
+          <article class="feature-card">
+            <div class="feature-card-image" style="background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);">📢</div>
+            <div class="feature-card-content">
+              <h3>2026 EQASA Marking Descriptors</h3>
+              <p class="text-small"><strong>Posted:</strong> January 2025</p>
+              <p>Updates to 2026 EQASA examination marking descriptors and assessment criteria.</p>
+              <a href="news-2026-eqasa.html" class="btn btn-sm">Read More</a>
+            </div>
+          </article>
+          
+          <article class="feature-card">
+            <div class="feature-card-image" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%);">🎓</div>
+            <div class="feature-card-content">
+              <h3>New Examination Dates Released</h3>
+              <p class="text-small"><strong>Posted:</strong> December 2024</p>
+              <p>Provincial examination dates for 2025 are now available. Register your preferred venue today.</p>
+              <a href="exam-dates.html" class="btn btn-sm">View Dates</a>
+            </div>
+          </article>
+          
+          <article class="feature-card">
+            <div class="feature-card-image" style="background: linear-gradient(135deg, #17a2b8 0%, #3498db 100%);">📚</div>
+            <div class="feature-card-content">
+              <h3>Syllabus Updates for 2025</h3>
+              <p class="text-small"><strong>Posted:</strong> November 2024</p>
+              <p>Important syllabus updates and new learning resources now available for all modules.</p>
+              <a href="news.html" class="btn btn-sm">All News</a>
+            </div>
+          </article>
+        </div>
+      </section>
+      
+      <!-- Call to Action Section -->
+      <section class="featured-section" style="text-align: center;">
+        <h2>Ready to Start Your SANIP Journey?</h2>
+        <p style="font-size: var(--font-size-lg); margin-bottom: var(--space-2xl);">
+          Join hundreds of equestrian professionals who have advanced their careers through SANIP certification.
+        </p>
+        <div class="hero-cta">
+          <a href="shop.html" class="btn btn-outline" style="color: var(--color-white); border-color: var(--color-white);">
+            Register for EQASA
+          </a>
+          <a href="need-to-know.html" class="btn btn-outline" style="color: var(--color-white); border-color: var(--color-white);">
+            Need to Know First?
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <!-- Footer (reusable template) -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>EQASA Registration</h4>
+          <ul>
+            <li><a href="shop.html">Register Now</a></li>
+            <li><a href="register.html">Create Account</a></li>
+            <li><a href="fees.html">View Fees</a></li>
+            <li><a href="syllabus.html">View Syllabus</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="syllabus.html">Syllabus</a></li>
+            <li><a href="alumni.html">Alumni List</a></li>
+            <li><a href="rpl.html">RPL Process</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="need-to-know.html">Need to Know</a></li>
+            <li><a href="exam-dates.html">Exam Dates</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="about-us.html">About SANIP</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="my-account.html">My Account</a></li>
+            <li><a href="cart.html">Shopping Cart</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>&copy; 2024 SANIP. All rights reserved. | 
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a>
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
