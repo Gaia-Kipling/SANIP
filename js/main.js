@@ -1,122 +1,67 @@
-/* ==========================================================================
-   SANIP/EQASA Website - Main JavaScript
-   ========================================================================== */
+/* SANIP/EQASA - shared frontend utilities */
 
-// DOM Ready
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('SANIP/EQASA Website initialized');
-  
-  // Initialize all components
-  initializeNavigation();
-  initializeForms();
+document.addEventListener('DOMContentLoaded', function () {
+  // Load the shared visual refinement layer without requiring every HTML page
+  // to be edited individually.
+  if (!document.querySelector('link[data-sanip-overrides]')) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'css/overrides.css';
+    link.dataset.sanipOverrides = 'true';
+    document.head.appendChild(link);
+  }
+
+  if (typeof initializeNavigation === 'function') initializeNavigation();
+  if (typeof initializeDropdowns === 'function') initializeDropdowns();
+  if (typeof initializeKeyboardNavigation === 'function') initializeKeyboardNavigation();
+  if (typeof setupMenuAccessibility === 'function') setupMenuAccessibility();
+  if (typeof initializeForms === 'function') initializeForms();
   initializeBackToTop();
   initializeExternalLinks();
-  initializeSmothScroll();
 });
 
-/* ==========================================================================
-   GENERAL UTILITIES
-   ========================================================================== */
-
-/**
- * Add 'active' class to current page link
- */
 function setActiveNavLink() {
-  const currentPath = window.location.pathname;
-  const navLinks = document.querySelectorAll('.nav-link');
-  
-  navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && currentPath.includes(href)) {
-      link.classList.add('active');
-    }
+  const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link[href]').forEach(function (link) {
+    const href = link.getAttribute('href').split('#')[0].split('/').pop();
+    if (href && href === currentFile) link.classList.add('active');
   });
 }
 
-/**
- * Initialize smooth scrolling
- */
-function initializeSmothScroll() {
-  // Already handled by CSS scroll-behavior: smooth
-}
-
-/**
- * Open external links in new tab
- */
 function initializeExternalLinks() {
-  const externalLinks = document.querySelectorAll('a[target="_blank"]');
-  
-  externalLinks.forEach(link => {
+  document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
     link.setAttribute('rel', 'noopener noreferrer');
   });
 }
 
-/**
- * Back to top button
- */
 function initializeBackToTop() {
-  const backToTopLink = document.querySelector('.back-to-top');
-  
-  if (!backToTopLink) return;
-  
-  window.addEventListener('scroll', function() {
-    if (window.pageYOffset > 300) {
-      backToTopLink.style.display = 'inline-block';
-    } else {
-      backToTopLink.style.display = 'none';
-    }
-  });
-  
-  backToTopLink.addEventListener('click', function(e) {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  const links = document.querySelectorAll('.back-to-top');
+  if (!links.length) return;
+
+  links.forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
 }
 
-/**
- * Utility: Show/hide element
- */
 function toggleElement(selector) {
   const element = document.querySelector(selector);
-  if (element) {
-    element.classList.toggle('active');
-  }
+  if (element) element.classList.toggle('active');
 }
 
-/**
- * Utility: Hide all elements matching selector
- */
 function hideAll(selector) {
-  const elements = document.querySelectorAll(selector);
-  elements.forEach(el => {
-    el.classList.remove('active');
-    el.style.display = 'none';
+  document.querySelectorAll(selector).forEach(function (element) {
+    element.classList.remove('active');
+    element.hidden = true;
   });
 }
 
-/**
- * Utility: Show element
- */
 function showElement(selector) {
   const element = document.querySelector(selector);
   if (element) {
     element.classList.add('active');
-    element.style.display = 'block';
+    element.hidden = false;
   }
 }
-
-/* ==========================================================================
-   CONSOLE LOGGING (for debugging)
-   ========================================================================== */
-
-console.log(
-  '%cSANIP/EQASA Website',
-  'color: #2c5f2d; font-size: 18px; font-weight: bold;'
-);
-console.log(
-  '%cImproving equestrian education through responsive design',
-  'color: #666; font-style: italic;'
-);
