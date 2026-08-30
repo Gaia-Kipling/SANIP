@@ -1,568 +1,181 @@
-/* ==========================================================================
-   SANIP/EQASA Website - Responsive Design (Mobile-First)
-   ========================================================================== */
-
-/* Base mobile styles are set in global.css, layout.css, etc.
-   These media queries enhance and adjust for larger screens */
-
-/* ==========================================================================
-   SMALL MOBILE - 375px and up
-   ========================================================================== */
+/* SANIP/EQASA responsive system */
 
 @media (min-width: 375px) {
-  .container {
-    padding: 0 var(--space-lg);
-  }
+  .container { padding: 0 var(--space-lg); }
 }
-
-/* ==========================================================================
-   MOBILE LANDSCAPE - 480px and up
-   ========================================================================== */
 
 @media (min-width: 480px) {
-  h1 {
-    font-size: var(--font-size-3xl);
-  }
-
-  .page-title {
-    font-size: var(--font-size-3xl);
-  }
-
-  .section-heading {
-    font-size: var(--font-size-2xl);
-  }
-
-  .footer-content {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  h1 { font-size: var(--font-size-3xl); }
+  .page-title { font-size: var(--font-size-3xl); }
+  .section-heading { font-size: var(--font-size-2xl); }
+  .footer-content { grid-template-columns: repeat(2, 1fr); }
 }
-
-/* ==========================================================================
-   TABLET - 768px and up
-   ========================================================================== */
 
 @media (min-width: 768px) {
-  /* Typography scaling */
-  body {
-    font-size: var(--font-size-base);
-  }
-
-  h1 {
-    font-size: var(--font-size-4xl);
-  }
-
-  h2 {
-    font-size: var(--font-size-3xl);
-  }
-
-  h3 {
-    font-size: var(--font-size-2xl);
-  }
-
-  /* Header changes */
-  .menu-toggle {
-    display: none;
-  }
-
-  /* Navigation becomes visible */
-  nav {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .nav-list {
-    flex-direction: row;
-  }
-
-  /* Main content layout changes */
-  .content-wrapper {
-    grid-template-columns: 1fr 300px;
-    gap: var(--space-xl);
-  }
-
-  .main-content {
-    grid-column: 1;
-  }
-
-  .sidebar {
-    grid-column: 2;
-    position: sticky;
-    top: 100px;
-  }
-
-  /* Footer columns */
-  .footer-content {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  /* Grid system columns */
-  .col-2 {
-    flex: 0 0 50%;
-  }
-
-  .col-3 {
-    flex: 0 0 33.333%;
-  }
-
-  .col-4 {
-    flex: 0 0 25%;
-  }
-
-  /* Form improvements */
-  .form-row {
-    display: flex;
-    gap: var(--space-md);
-  }
-
-  .form-row .form-group {
-    flex: 1;
-  }
-
-  /* Table responsive */
-  .table-responsive {
-    overflow-x: visible;
-  }
-
-  .table {
-    font-size: var(--font-size-base);
-  }
-
-  /* Cards in grid */
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-lg);
-  }
-
-  /* Spacing adjustments */
-  main {
-    padding: var(--space-2xl) 0;
-  }
-
-  section {
-    margin-bottom: var(--space-3xl);
-  }
+  body { font-size: var(--font-size-base); }
+  h1 { font-size: var(--font-size-4xl); }
+  h2 { font-size: var(--font-size-3xl); }
+  h3 { font-size: var(--font-size-2xl); }
+  .menu-toggle { display: none; }
+  nav { display: flex; flex-direction: row; }
+  .nav-list { flex-direction: row; }
+  .content-wrapper { grid-template-columns: minmax(0, 1fr) 280px; gap: var(--space-xl); }
+  .main-content { grid-column: 1; min-width: 0; }
+  .sidebar { grid-column: 2; position: sticky; top: 100px; }
+  .footer-content { grid-template-columns: repeat(4, 1fr); }
+  .col-2 { flex: 0 0 50%; }
+  .col-3 { flex: 0 0 33.333%; }
+  .col-4 { flex: 0 0 25%; }
+  .form-row { display: flex; gap: var(--space-md); }
+  .form-row .form-group { flex: 1; }
+  .table-responsive { overflow-x: auto; }
+  .table { font-size: var(--font-size-base); }
+  .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-lg); }
+  main { padding: var(--space-2xl) 0; }
+  section { margin-bottom: var(--space-3xl); }
 }
-
-/* ==========================================================================
-   TABLET LANDSCAPE - 1024px and up
-   ========================================================================== */
 
 @media (min-width: 1024px) {
-  .container {
-    max-width: var(--container-lg);
-  }
-
-  /* Three column layout support */
-  .col-3 {
-    flex: 0 0 33.333%;
-  }
-
-  /* Card grids */
-  .card-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Improved navigation */
-  .nav-list {
-    gap: var(--space-md);
-  }
-
-  .dropdown-menu {
-    min-width: 220px;
-  }
-
-  /* Header adjustments */
-  .header-content {
-    gap: var(--space-xl);
-  }
-
-  /* Sidebar positioning */
-  .sidebar {
-    top: 120px;
-  }
-
-  /* Larger main content padding */
-  .main-content {
-    padding: var(--space-2xl);
-  }
-
-  /* Spacing improvements */
-  main {
-    padding: var(--space-3xl) 0;
-  }
-
-  /* Featured sections */
-  .featured-section {
-    padding: var(--space-4xl) var(--space-2xl);
-  }
+  .container { max-width: var(--container-lg); }
+  .card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .nav-list { gap: 0; }
+  .nav-link { padding-left: var(--space-md); padding-right: var(--space-md); font-size: var(--font-size-sm); }
+  .dropdown-menu { min-width: 220px; }
+  .header-content { gap: var(--space-lg); }
+  .sidebar { top: 110px; }
+  .main-content { padding: var(--space-2xl); }
+  main { padding: var(--space-3xl) 0; }
+  .featured-section { padding: var(--space-4xl) var(--space-2xl); }
 }
-
-/* ==========================================================================
-   DESKTOP - 1280px and up
-   ========================================================================== */
 
 @media (min-width: 1280px) {
-  .container {
-    max-width: var(--container-xl);
-  }
-
-  h1 {
-    font-size: var(--font-size-4xl);
-  }
-
-  /* Wider layouts */
-  .content-wrapper {
-    gap: var(--space-2xl);
-  }
-
-  /* Four column grid */
-  .col-4 {
-    flex: 0 0 25%;
-  }
-
-  .card-grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-lg);
-  }
-
-  /* Improve readable content width */
-  .readable {
-    max-width: 80ch;
-  }
-
-  /* Hero section enhancements */
-  .hero-section {
-    padding: var(--space-4xl) var(--space-2xl);
-  }
-
-  /* Footer improvements */
-  .footer-content {
-    gap: var(--space-2xl);
-  }
-
-  /* Increased hover effects on larger screens */
-  .card {
-    cursor: pointer;
-  }
+  .container { max-width: var(--container-xl); }
+  h1 { font-size: var(--font-size-4xl); }
+  .content-wrapper { gap: var(--space-2xl); }
+  .col-4 { flex: 0 0 25%; }
+  .card-grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-lg); }
+  .readable { max-width: 80ch; }
+  .hero-section { padding: var(--space-4xl) var(--space-2xl); }
+  .footer-content { gap: var(--space-2xl); }
 }
-
-/* ==========================================================================
-   LARGE DESKTOP - 1440px and up
-   ========================================================================== */
 
 @media (min-width: 1440px) {
-  .container {
-    max-width: var(--container-2xl);
-  }
-
-  /* More generous spacing */
-  main {
-    padding: var(--space-4xl) 0;
-  }
-
-  section {
-    margin-bottom: var(--space-4xl);
-  }
-
-  /* Larger typography */
-  body {
-    font-size: var(--font-size-base);
-  }
-
-  .page-title {
-    font-size: 3rem;
-  }
-
-  /* Content improvements */
-  .main-content {
-    padding: var(--space-3xl);
-  }
-
-  .readable {
-    max-width: 90ch;
-  }
+  .container { max-width: var(--container-2xl); }
+  main { padding: var(--space-4xl) 0; }
+  section { margin-bottom: var(--space-4xl); }
+  .page-title { font-size: 3rem; }
+  .main-content { padding: var(--space-3xl); }
+  .readable { max-width: 90ch; }
 }
-
-/* ==========================================================================
-   EXTRA LARGE DESKTOP - 1920px and up
-   ========================================================================== */
 
 @media (min-width: 1920px) {
-  .container {
-    padding: 0 var(--space-2xl);
-  }
-
-  /* Maximum content width */
-  .max-width {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-
-  /* Generous spacing */
-  h1 {
-    margin-bottom: var(--space-2xl);
-  }
-
-  h2 {
-    margin-bottom: var(--space-2xl);
-  }
-
-  /* Advanced layouts */
-  .hero-section {
-    padding: var(--space-4xl);
-  }
-
-  /* Multiple columns for content */
-  .text-columns {
-    columns: 2;
-    column-gap: var(--space-2xl);
-  }
+  .container { padding-left: var(--space-2xl); padding-right: var(--space-2xl); }
+  .max-width { max-width: 1400px; margin: 0 auto; }
+  .text-columns { columns: 2; column-gap: var(--space-2xl); }
 }
 
-/* ==========================================================================
-   SMALL SCREENS ADJUSTMENTS (320px - 767px)
-   ========================================================================== */
-
+/* Mobile layout: no horizontal overflow, comfortable touch targets, and a usable menu. */
 @media (max-width: 767px) {
-  /* Full width navigation when mobile menu open */
+  .container { width: 100%; padding-left: var(--space-md); padding-right: var(--space-md); }
+  header { position: sticky; top: 0; }
+  .header-content { min-height: 64px; padding: var(--space-sm) 0; gap: var(--space-sm); }
+  .header-nav { margin-left: auto; gap: var(--space-xs); justify-content: flex-end; }
+  .logo { min-width: 0; }
+  .logo-text strong { font-size: var(--font-size-lg); }
+  .logo-text small { font-size: 0.68rem; }
+  .menu-toggle { display: flex; flex-direction: column; justify-content: center; width: 44px; height: 44px; padding: 8px; border-radius: var(--radius-md); }
+  .menu-toggle:hover, .menu-toggle:focus-visible { background: var(--color-background-light); }
+  .cart-icon { flex: 0 0 40px; width: 40px; height: 40px; }
+
+  nav { display: none; }
   nav.mobile-open {
+    display: flex;
     position: fixed;
-    top: 60px;
+    top: 64px;
     left: 0;
     right: 0;
+    width: 100%;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
     background-color: var(--color-white);
     border-bottom: 1px solid var(--color-border);
-    z-index: 99;
+    box-shadow: var(--shadow-lg);
+    z-index: 999;
     flex-direction: column;
   }
+  .nav-list { display: flex; flex-direction: column; align-items: stretch; width: 100%; padding: var(--space-xs) 0; }
+  .nav-list li { margin: 0; }
+  .nav-link { width: 100%; min-height: 48px; display: flex; align-items: center; padding: var(--space-sm) var(--space-md); border-bottom: 1px solid var(--color-border); }
+  .nav-link.active { border-bottom: 1px solid var(--color-border); border-left: 4px solid var(--color-primary); padding-left: calc(var(--space-md) - 4px); background: var(--color-background-light); }
 
-  .nav-list {
-    flex-direction: column;
-    width: 100%;
-  }
+  .content-wrapper { grid-template-columns: 1fr; gap: var(--space-lg); }
+  .main-content { grid-column: 1; padding: var(--space-lg); border-radius: var(--radius-md); }
+  .sidebar { grid-column: 1; position: static; }
+  .sidebar-section { padding: var(--space-md); }
+  .card-grid, .card-grid-4 { grid-template-columns: 1fr; }
+  .footer-content { grid-template-columns: 1fr; gap: var(--space-lg); }
+  .footer-bottom { flex-direction: column; gap: var(--space-md); text-align: center; }
+  .footer-section { padding-bottom: var(--space-md); }
+  .btn { width: 100%; }
 
-  .nav-link {
-    width: 100%;
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  /* Show mobile menu toggle */
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Stack content wrapper */
-  .content-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .main-content {
-    grid-column: 1;
-  }
-
-  .sidebar {
-    grid-column: 1;
-    position: static;
-  }
-
-  /* Single column cards */
-  .card-grid,
-  .card-grid-4 {
-    grid-template-columns: 1fr;
-  }
-
-  /* Footer single column on small screens */
-  .footer-content {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: var(--space-md);
-    text-align: center;
-  }
-
-  /* Reduce button sizes on mobile */
-  .btn {
-    width: 100%;
-  }
-
-  /* Form improvements */
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  textarea,
-  select {
-    font-size: 16px; /* Prevents zoom on iOS */
-  }
-
-  /* Table responsive */
-  .table-responsive {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .table {
-    font-size: var(--font-size-xs);
-  }
-
-  .table th,
-  .table td {
-    padding: var(--space-sm);
-  }
-
-  /* Modals on small screens */
-  .modal-content {
-    width: 95%;
-  }
-
-  /* Reduced header padding */
-  .header-content {
-    padding: var(--space-sm) 0;
-  }
-
-  .logo {
-    font-size: var(--font-size-base);
-  }
-
-  /* Dropdown menus */
-  .dropdown-menu {
-    position: fixed;
-    left: var(--space-lg);
-    right: var(--space-lg);
-    width: auto;
-  }
-
-  /* Hide some elements on very small screens */
-  .hide-mobile {
-    display: none !important;
-  }
-
-  /* Typography adjustments */
-  .page-title {
-    font-size: var(--font-size-2xl);
-  }
-
-  h1 {
-    font-size: var(--font-size-3xl);
-  }
-
-  h2 {
-    font-size: var(--font-size-2xl);
-  }
-
-  h3 {
-    font-size: var(--font-size-xl);
-  }
-
-  /* Spacing reductions */
-  main {
-    min-height: auto;
-    padding: var(--space-lg) 0;
-  }
-
-  section {
-    margin-bottom: var(--space-2xl);
-  }
-
-  .featured-section {
-    padding: var(--space-2xl) var(--space-lg);
-  }
-
-  /* Larger click targets for touch */
-  a, button {
-    min-height: 44px;
-    min-width: 44px;
-  }
-
-  /* Flexbox adjustments */
-  .flex-between {
-    flex-direction: column;
-    gap: var(--space-md);
-  }
+  input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="url"], input[type="date"], input[type="time"], input[type="number"], textarea, select { font-size: 16px; }
+  .table-responsive { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .table-responsive table { min-width: 640px; }
+  .table { font-size: var(--font-size-sm); }
+  .table th, .table td { padding: var(--space-sm); }
+  .modal-content { width: min(95%, 520px); }
+  .dropdown-menu { position: static; width: 100%; min-width: 0; box-shadow: none; border: 0; border-top: 1px solid var(--color-border); }
+  .hide-mobile { display: none !important; }
+  .page-title { font-size: var(--font-size-2xl); line-height: 1.15; }
+  h1 { font-size: clamp(1.75rem, 7vw, 2rem); }
+  h2 { font-size: clamp(1.4rem, 6vw, 1.75rem); }
+  h3 { font-size: var(--font-size-xl); }
+  main { min-height: auto; padding: var(--space-lg) 0; }
+  section { margin-bottom: var(--space-2xl); }
+  .featured-section { padding: var(--space-2xl) var(--space-lg); }
+  a, button { min-height: 44px; }
+  .flex-between { flex-direction: column; gap: var(--space-md); }
+  img, video, iframe, svg { max-width: 100%; }
 }
 
-/* ==========================================================================
-   PRINT MEDIA QUERIES
-   ========================================================================== */
+@media (max-width: 479px) {
+  .container { padding-left: var(--space-sm); padding-right: var(--space-sm); }
+  .main-content { padding: var(--space-md); }
+  .sidebar-section { padding: var(--space-md); }
+  .header-content { min-height: 60px; }
+  nav.mobile-open { top: 60px; max-height: calc(100vh - 60px); }
+  .page-title { margin-bottom: var(--space-md); }
+  .lead { font-size: var(--font-size-base); }
+  .info-box { padding: var(--space-md); }
+}
+
+@media (max-width: 359px) {
+  .logo-text small { display: none; }
+  .cart-icon { flex-basis: 38px; width: 38px; }
+  .menu-toggle { width: 42px; }
+  .main-content { padding: var(--space-sm); }
+}
 
 @media print {
-  header,
-  .sidebar,
-  .menu-toggle,
-  footer,
-  .no-print {
-    display: none;
-  }
-
-  body {
-    background-color: var(--color-white);
-  }
-
-  .main-content {
-    box-shadow: none;
-    border: none;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    page-break-after: avoid;
-  }
-
-  p, li, dt, dd {
-    page-break-inside: avoid;
-  }
+  header, .sidebar, .menu-toggle, footer, .no-print { display: none; }
+  body { background-color: var(--color-white); }
+  .main-content { box-shadow: none; border: none; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  img { max-width: 100%; }
+  h1, h2, h3, h4, h5, h6 { page-break-after: avoid; }
+  p, li, dt, dd { page-break-inside: avoid; }
 }
-
-/* ==========================================================================
-   HIGH CONTRAST MODE SUPPORT
-   ========================================================================== */
 
 @media (prefers-contrast: more) {
-  :root {
-    --color-border: #999999;
-    --color-text: #000000;
-  }
-
-  .card,
-  .sidebar-section {
-    border-width: 2px;
-  }
+  :root { --color-border: #777777; --color-text: #000000; }
+  .card, .sidebar-section { border-width: 2px; }
 }
 
-/* ==========================================================================
-   REDUCED MOTION SUPPORT
-   ========================================================================== */
-
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-/* ==========================================================================
-   DARK MODE SUPPORT (Optional)
-   ========================================================================== */
-
-@media (prefers-color-scheme: dark) {
-  /* Can add dark mode styles here if desired */
-  /* body {
-    background-color: #1a1a1a;
-    color: #f0f0f0;
-  } */
 }
