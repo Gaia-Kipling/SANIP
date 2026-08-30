@@ -11,7 +11,10 @@ function initializeNavigation() {
     toggleMobileMenu();
   });
 
+  // Close the mobile menu when a real navigation link is selected.
+  // Dropdown toggle buttons must remain open so their submenu can be used on mobile.
   document.querySelectorAll('.nav-link').forEach(function (link) {
+    if (link.classList.contains('dropdown-toggle')) return;
     link.addEventListener('click', closeMobileMenu);
   });
 
@@ -20,7 +23,10 @@ function initializeNavigation() {
   });
 
   document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') closeMobileMenu();
+    if (event.key === 'Escape') {
+      closeMobileMenu();
+      closeAllDropdowns();
+    }
   });
 
   if (typeof setActiveNavLink === 'function') setActiveNavLink();
@@ -45,6 +51,14 @@ function closeMobileMenu() {
   menuToggle.setAttribute('aria-expanded', 'false');
 }
 
+function closeAllDropdowns() {
+  document.querySelectorAll('.dropdown.active').forEach(function (dropdown) {
+    dropdown.classList.remove('active');
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  });
+}
+
 function initializeDropdowns() {
   document.querySelectorAll('.dropdown').forEach(function (dropdown) {
     const toggle = dropdown.querySelector('.dropdown-toggle');
@@ -59,11 +73,7 @@ function initializeDropdowns() {
       event.preventDefault();
       event.stopPropagation();
       const open = dropdown.classList.contains('active');
-      document.querySelectorAll('.dropdown.active').forEach(function (other) {
-        other.classList.remove('active');
-        const otherToggle = other.querySelector('.dropdown-toggle');
-        if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
-      });
+      closeAllDropdowns();
       dropdown.classList.toggle('active', !open);
       toggle.setAttribute('aria-expanded', String(!open));
     });
@@ -78,13 +88,7 @@ function initializeDropdowns() {
   });
 
   document.addEventListener('click', function (event) {
-    if (!event.target.closest('.dropdown')) {
-      document.querySelectorAll('.dropdown.active').forEach(function (dropdown) {
-        dropdown.classList.remove('active');
-        const toggle = dropdown.querySelector('.dropdown-toggle');
-        if (toggle) toggle.setAttribute('aria-expanded', 'false');
-      });
-    }
+    if (!event.target.closest('.dropdown')) closeAllDropdowns();
   });
 }
 
