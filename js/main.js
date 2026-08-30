@@ -11,11 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.head.appendChild(link);
   }
 
-  if (typeof initializeNavigation === 'function') initializeNavigation();
-  if (typeof initializeDropdowns === 'function') initializeDropdowns();
-  if (typeof initializeKeyboardNavigation === 'function') initializeKeyboardNavigation();
-  if (typeof setupMenuAccessibility === 'function') setupMenuAccessibility();
-  if (typeof initializeForms === 'function') initializeForms();
+  // Navigation and forms self-initialize from their own scripts.
   initializeBackToTop();
   initializeExternalLinks();
 });
@@ -36,9 +32,9 @@ function initializeExternalLinks() {
 
 function initializeBackToTop() {
   const links = document.querySelectorAll('.back-to-top');
-  if (!links.length) return;
-
   links.forEach(function (link) {
+    if (link.dataset.initialized === 'true') return;
+    link.dataset.initialized = 'true';
     link.addEventListener('click', function (event) {
       event.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
